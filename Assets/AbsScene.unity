@@ -841,7 +841,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1001 &515733764
+--- !u!1001 &418261485
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -852,7 +852,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 63984161dde5e4fb99ee763f8a8aff47,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 63984161dde5e4fb99ee763f8a8aff47,
         type: 3}
@@ -897,7 +897,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 63984161dde5e4fb99ee763f8a8aff47,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 63984161dde5e4fb99ee763f8a8aff47,
         type: 3}
@@ -924,22 +924,67 @@ PrefabInstance:
       propertyPath: m_Name
       value: gun
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1327309172163035851, guid: 63984161dde5e4fb99ee763f8a8aff47, type: 3}
-    - {fileID: -1701053905158330056, guid: 63984161dde5e4fb99ee763f8a8aff47, type: 3}
+    - target: {fileID: 1327309172163035851, guid: 63984161dde5e4fb99ee763f8a8aff47,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 63984161dde5e4fb99ee763f8a8aff47,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1359837007}
+      addedObject: {fileID: 418261488}
   m_SourcePrefab: {fileID: 100100000, guid: 63984161dde5e4fb99ee763f8a8aff47, type: 3}
---- !u!4 &515733765 stripped
+--- !u!4 &418261486 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 63984161dde5e4fb99ee763f8a8aff47,
     type: 3}
-  m_PrefabInstance: {fileID: 515733764}
+  m_PrefabInstance: {fileID: 418261485}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &418261487 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 63984161dde5e4fb99ee763f8a8aff47,
+    type: 3}
+  m_PrefabInstance: {fileID: 418261485}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &418261488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418261487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fb5a11e9f72442539347c6d1707a645, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pinchAnimationAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Pinch Animation
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 8145bc38-5c7e-4794-b53e-ecdc63d65a3d
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -5982496924579745919, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
+  bulletSpawn: {fileID: 525779470}
+  bulletPrefab: {fileID: 6393449500625555704, guid: 74a1b4a5e7b8b45a1a261ca7b8774c2c,
+    type: 3}
+  everySecond: 0.2
+  bulletSpeed: 20
+--- !u!4 &525779470 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4249600011743342365, guid: 63984161dde5e4fb99ee763f8a8aff47,
+    type: 3}
+  m_PrefabInstance: {fileID: 418261485}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &613301160
 GameObject:
@@ -1189,11 +1234,11 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!1 &864009245 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -3970378333114368405, guid: 63984161dde5e4fb99ee763f8a8aff47,
+--- !u!4 &887283725 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4249600011743342365, guid: 63984161dde5e4fb99ee763f8a8aff47,
     type: 3}
-  m_PrefabInstance: {fileID: 515733764}
+  m_PrefabInstance: {fileID: 2108268765}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &926827784
 GameObject:
@@ -1253,6 +1298,7 @@ GameObject:
   - component: {fileID: 979901818}
   - component: {fileID: 979901817}
   - component: {fileID: 979901816}
+  - component: {fileID: 979901820}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -1339,13 +1385,40 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 979901815}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 4}
+  m_LocalPosition: {x: 0, y: 1.491, z: 4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &979901820
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 979901815}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1198745235
 GameObject:
   m_ObjectHideFlags: 0
@@ -1517,38 +1590,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1359837006 stripped
+--- !u!1 &1533063660 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 63984161dde5e4fb99ee763f8a8aff47,
     type: 3}
-  m_PrefabInstance: {fileID: 515733764}
+  m_PrefabInstance: {fileID: 2108268765}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1359837007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1359837006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fb5a11e9f72442539347c6d1707a645, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pinchAnimationAction:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Pinch Animation
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 07ab6389-f5d9-4eec-9111-5f3430fad842
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: -4289430672226363583, guid: c348712bda248c246b8c49b3db54643f,
-      type: 3}
-  bulletSpawn: {fileID: 864009245}
 --- !u!1001 &1710428835
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1694,7 +1741,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 515733765}
+  - {fileID: 418261486}
   m_Father: {fileID: 2003605993}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2347,12 +2394,21 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 63984161dde5e4fb99ee763f8a8aff47,
         type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1327309172163035851, guid: 63984161dde5e4fb99ee763f8a8aff47,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 63984161dde5e4fb99ee763f8a8aff47,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2108268767}
   m_SourcePrefab: {fileID: 100100000, guid: 63984161dde5e4fb99ee763f8a8aff47, type: 3}
 --- !u!4 &2108268766 stripped
 Transform:
@@ -2360,3 +2416,33 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2108268765}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2108268767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533063660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fb5a11e9f72442539347c6d1707a645, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pinchAnimationAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Pinch Animation
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 11ab1952-3a03-4328-9821-4ee9140691e9
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 83097790271614945, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
+  bulletSpawn: {fileID: 887283725}
+  bulletPrefab: {fileID: 6393449500625555704, guid: 74a1b4a5e7b8b45a1a261ca7b8774c2c,
+    type: 3}
+  everySecond: 0.2
+  bulletSpeed: 20
